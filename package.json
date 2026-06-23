@@ -1,0 +1,60 @@
+{
+  "name": "magic-mark",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@11.8.0",
+  "description": "Tiny placeholder engine. Parse {id:type:arg1,arg2}, resolve via your own handlers. Renderer-agnostic.",
+  "author": "imba97",
+  "license": "MIT",
+  "homepage": "https://github.com/imba97/magic-mark#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:imba97/magic-mark"
+  },
+  "bugs": {
+    "url": "https://github.com/imba97/magic-mark/issues"
+  },
+  "keywords": [
+    "placeholder",
+    "mark",
+    "template"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "dist/index.mjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepare": "simple-git-hooks",
+    "stub": "unbuild --stub",
+    "build": "unbuild",
+    "test": "vitest run",
+    "lint": "eslint --cache",
+    "release": "bumpp"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@antfu/eslint-config": "^9.0.0",
+    "@types/node": "^26.0.0",
+    "bumpp": "^11.1.0",
+    "eslint": "^10.5.0",
+    "nano-staged": "^1.0.2",
+    "simple-git-hooks": "^2.13.1",
+    "typescript": "^6.0.3",
+    "unbuild": "^3.6.1",
+    "vitest": "^4.1.9"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm nano-staged"
+  },
+  "nano-staged": {
+    "*": "eslint --cache --fix"
+  }
+}
