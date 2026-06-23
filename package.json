@@ -1,7 +1,7 @@
 {
   "name": "magic-mark",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "packageManager": "pnpm@11.8.0",
   "description": "Tiny placeholder engine. Parse {id:type:arg1,arg2}, resolve via your own handlers. Renderer-agnostic.",
   "author": "imba97",
